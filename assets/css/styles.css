@@ -111,7 +111,9 @@ button {
 }
 
 .hero__media {
+    position: relative;
     display: flex;
+    padding-bottom: 94px;
 }
 
 .hero__img-wrap {
@@ -166,4 +168,65 @@ button {
     background: #faa7ad;
     width: 186px;
     height: 244px;
+}
+
+.hero__list {
+    position: absolute;
+    left: 129px;
+    /* Để nội dung sau này không bị sát lề */
+    /* Thì cần padding hero__media */
+    /* vì vậy bottom thay vì -94 */
+    /* thì nó sẽ là 0 */
+    bottom: 0;
+    width: 250px;
+    height: 156px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: -17px 14px 68px -4px rgba(207, 174, 132, 0.25);
+    padding: 18px 14px;
+}
+
+.hero__list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.hero__list-item:first-child {
+    padding-bottom: 24px;
+    border-bottom: 2px solid rgba(242, 242, 242, 1);
+}
+
+.hero__list-item__thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.hero__list-item__thumb-top {
+    background: #fec23f;
+}
+
+.hero__list-item__info {
+    margin-left: 8px;
+    color: #181e52;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.hero__list-item__skeleton {
+    margin-top: 6px;
+    width: 118px;
+    height: 4px;
+    border-radius: 10px;
+    opacity: 0.08;
+    background: #000958;
+}
+
+.hero__list-item__skeleton:last-child {
+    width: 39px;
+}
+
+.hero__list-item__thumb-bottom {
+    background: #afd1ed;
 }
