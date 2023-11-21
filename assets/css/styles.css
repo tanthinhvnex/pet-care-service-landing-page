@@ -12,6 +12,10 @@ body {
     font-size: 1.6rem;
 }
 
+:root {
+    --primary-color: #ff5b2e;
+}
+
 /* Common */
 
 a {
@@ -42,9 +46,11 @@ button {
 }
 
 .btn {
-    display: inline-block;
-    min-width: 130px;
     --height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
     height: var(--height);
     /* Để cho chữ luôn được căn giữa theo chiều cao nè */
     line-height: var(--height);
@@ -59,6 +65,24 @@ button {
 
 .btn:hover {
     opacity: 0.9;
+    cursor: pointer;
+}
+
+.btn--primary {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn__icon {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
 }
 
 /* Header */
@@ -229,4 +253,44 @@ button {
 
 .hero__list-item__thumb-bottom {
     background: #afd1ed;
+}
+
+.hero__heading {
+    color: #000958;
+    width: 517px;
+    font-size: 6.6rem;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.hero__desc {
+    margin-top: 24px;
+    width: 391px;
+    color: #656689;
+    font-size: 1.6rem;
+    line-height: 1.88;
+}
+
+.hero__row {
+    margin-top: 38px;
+}
+
+.btn__icon {
+}
+
+.hero__cta-link {
+    margin-left: 24px;
+    color: #000958;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration-line: underline;
+}
+
+.hero__cta-btn {
+    --height: 60px;
+    font-size: 1.6rem;
+    box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+    min-width: 186px;
 }
