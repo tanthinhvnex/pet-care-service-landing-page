@@ -312,12 +312,17 @@ button {
 
 /* About */
 .about {
-    margin-top: 207px;
+    margin-top: 138px;
 }
 
 .about__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.about__media {
+    position: relative;
 }
 
 .about__label {
@@ -371,4 +376,71 @@ button {
     top: 2px;
     left: 5px;
     content: url(../icons/check.svg);
+}
+
+.about__card {
+    position: absolute;
+    top: 165px;
+    left: 0;
+    padding: 30px 26px;
+    width: 136px;
+    height: 156px;
+    border-radius: 10px;
+    background: #5bd6e2;
+    text-align: center;
+    box-shadow: -15px 26px 48px 0px rgba(85, 240, 255, 0.17);
+}
+.about__cart-title {
+    color: #fff;
+    font-family: "Sora", sans-serif;
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.about__card-desc {
+    margin-top: 14px;
+    width: 83px;
+    color: #c6f4f9;
+    font-size: 14px;
+    line-height: 1.43;
+}
+
+.about__cart-decor {
+    /* Mặc dù about__card có position absolute */
+    /* about__cart-decor vẫn định vị theo about__card */
+    position: absolute;
+    top: -39px;
+    right: -32px;
+}
+.about__img-wrap {
+    /* Không set chiều cao  */
+    /* Vì các ảnh có thể có chiều cao khác nhau */
+    width: 494px;
+    position: relative;
+    margin-left: auto;
+}
+
+.about__img-wrap::after {
+    position: absolute;
+    /* Tương đương left 0, right 0, bottom 0 */
+    inset: auto 0 0 0;
+    content: "";
+    z-index: -1;
+    height: 336px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #fce0ef 0%, #fac3d1 100%);
+}
+
+.about__img {
+    width: 450px;
+    display: block;
+    margin: 0 auto;
+}
+
+.about__media-decor {
+    position: absolute;
+    right: -50px;
+    top: 157px;
+    z-index: -1;
 }
