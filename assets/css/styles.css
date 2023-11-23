@@ -591,3 +591,133 @@ button {
     opacity: 1;
     height: 1.5px;
 }
+
+.service {
+    padding: 68px 0 100px;
+    margin-top: 190px;
+    background: #fff6ed;
+}
+
+.service__top {
+    text-align: center;
+}
+
+.service__desc {
+    margin-bottom: 15px;
+    color: #5e6085;
+    font-family: "Sora", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.service__body {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 60px;
+    margin-top: 71px;
+}
+
+.service-item {
+    border-radius: 10px;
+    border: 2px solid rgba(255, 188, 122, 0.26);
+    background: #fff;
+    padding: 30px;
+}
+
+/* Css vào service-item mà đứng sau service-item */
+.service-item + .service-item {
+    margin-top: 24px;
+}
+
+.service-item__heading {
+    position: relative;
+    padding-left: 12px;
+    color: #000958;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.service-item__heading::before {
+    position: absolute;
+    inset: 0 auto 0 0;
+    content: "";
+    width: 2px;
+    background: linear-gradient(90deg, #ff5b2e 0.39%, #ffa187 100.29%);
+}
+
+.service-item__desc {
+    margin-top: 18px;
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 1.71;
+    width: 244px;
+}
+
+.service-item__more {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 24px;
+    color: #34396a;
+    font-family: "Sora", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.service-item__more::after {
+    content: url(../icons/arrow-up-right.svg);
+    /* Thấy arrow hơi cao hơn */
+    /* Nên để margin top 1px cho hạ thấp xuống 1 xíu*/
+    margin: 1px 0 0 5px;
+}
+
+.service__media {
+    position: relative;
+    margin-top: 18px;
+}
+
+.service__media::after {
+    position: absolute;
+    bottom: 0;
+    /* Tạo khoảng hở 2 bên, cho lông mèo tràn ra */
+    left: 16px;
+    right: 16px;
+    /* Nếu làm z-index: -1 */
+    /* Thì sẽ làm cho cái nền này xuống tận phía dưới */
+    /* Xuống dưới hơn cả nền service__media */
+    /* Nên sẽ không thấy được */
+    /* z-index: -1; */
+    /* nên tác động kéo ảnh con mèo lên trên */
+    content: "";
+    height: 350px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
+}
+
+.service__img {
+    width: 100%;
+    position: relative;
+    /* Muốn dùng được z-index thì phải luôn có position */
+    /* Phải định vị được phần tử ở đâu thì mới dùng z-index được */
+    z-index: 1;
+    display: block;
+}
+
+.service__cta-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.service__cta {
+    min-width: 214px;
+    color: #ff5b2e;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 31px;
+    border: 1px solid currentColor;
+    box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+}
