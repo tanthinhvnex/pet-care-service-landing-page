@@ -504,3 +504,90 @@ button {
     right: -42px;
     bottom: -55px;
 }
+
+.about__content-bottom {
+    width: 511px;
+    margin-bottom: 50px;
+}
+
+.tab__list {
+    position: relative;
+    /* Để độ rộng bằng nội dung mà nó chứa thôi */
+    /* Đặt như này để kẻ cái thanh gạch dưới vừa hết cái chữ thì thôi */
+    display: inline-flex;
+    column-gap: 56px;
+}
+
+.tab__list::after,
+.tab__item--active::after,
+.tab__content-more::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    border-radius: 1px;
+    opacity: 0.07;
+    background: #ff5b2e;
+}
+.tab__item--active::after {
+    width: 95px;
+    opacity: 1;
+}
+
+.tab__item {
+    position: relative;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    cursor: pointer;
+}
+
+.tab__icon {
+    width: 20px;
+    /* Mấy cái icon này chỉ nên để width hoặc height thôi */
+}
+.tab__title {
+    font-family: "Sora", sans-serif;
+    color: #48496a;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.tab__contents {
+    padding-top: 36px;
+}
+
+.tab__content-item {
+    display: none;
+}
+
+.tab__content-item--active {
+    display: block;
+}
+
+.tab__content-desc {
+    width: 391px;
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 1.71;
+}
+
+.tab__content-more {
+    position: relative;
+    display: inline-block;
+    margin-top: 32px;
+    color: #ff5d31;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1;
+    padding-bottom: 5px;
+}
+
+.tab__content-more::after {
+    opacity: 1;
+    height: 1.5px;
+}
